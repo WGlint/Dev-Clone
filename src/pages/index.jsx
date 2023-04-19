@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <>
       <div>
-          <Loader show={true} />
       </div>
-      
     </>
   )
 }
