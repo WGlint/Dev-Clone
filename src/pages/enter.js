@@ -5,8 +5,6 @@ import debounce from "lodash.debounce";
 
 export default function EnterPage({}) {
   const { user, username } = useContext(UserContext);
-  console.log(user);
-  console.log(username);
 
   return (
     <main>
@@ -43,8 +41,7 @@ function UsernameForm() {
     checkUsername(formValue)
   }, [formValue])
 
-  const onChange = (e) => 
-  {
+  const onChange = (e) => {
     console.log(e.target.value.toLowerCase());
     const val = e.target.value.toLowerCase()
     const re = /^(?=[a-zA-Z0-9._]{3,15}$)(?!.*[_.]{2})[^_.].*[^_.]$/
@@ -81,8 +78,7 @@ function UsernameForm() {
 
   
 
-  const onSubmit = async (e) => 
-  {
+  const onSubmit = async (e) => {
     e.preventDefault()
 
     const userDoc = firestore.doc(`users/${user.uid}`);
