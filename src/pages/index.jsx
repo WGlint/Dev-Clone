@@ -12,9 +12,6 @@ export async function getServerSideProps(context){
     .where('published', '==', true)
     .orderBy('createAt', 'desc')
     .limit(LIMIT)
-  
-  console.log(postsQuery);
-  console.log("ici");
 
   const posts = (await postsQuery.get()).docs.map(postToJSON)
 

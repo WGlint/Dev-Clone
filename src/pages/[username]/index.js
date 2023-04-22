@@ -14,6 +14,7 @@ export async function getServerSideProps({ query }){
         }
     }
 
+    
     let user = null
     let posts = null
 
@@ -21,7 +22,6 @@ export async function getServerSideProps({ query }){
         user = userDoc.data()
         const postsQuery = userDoc.ref
             .collection('posts')
-            .where('published', '==', true)
             .orderBy('createAt', 'desc')
             .limit(5)
         
