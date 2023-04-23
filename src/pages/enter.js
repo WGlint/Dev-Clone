@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect, useState } from "react";
 import { auth, firestore, googleAuthProvider } from "../../lib/firebase";
 import { UserContext } from "../../components/context";
 import debounce from "lodash.debounce";
+import { Router, useRouter } from "next/router";
 
 export default function EnterPage({}) {
   const { user, username } = useContext(UserContext);
@@ -14,8 +15,12 @@ export default function EnterPage({}) {
 }
 
 function SignInButton() {
+  const router = useRouter()
+
   const signInWithGoogle = async () => {
     await auth.signInWithPopup(googleAuthProvider);
+
+    router.push(`/admin`)
   };
 
   return (

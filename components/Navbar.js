@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { UserContext } from "./context";
+import { auth } from "../lib/firebase";
 
 export default function Navbar()
 {
 
     const { user, username } = useContext(UserContext)
-
     return(
         <nav className="navbar" >
             <ul>
@@ -20,6 +20,7 @@ export default function Navbar()
                 { username && (
                     <>
                         <li className="push-left" >
+                            <button onClick={() => auth.signOut()}>Sign Out</button>
                             <Link href="/admin" >
                                 <button className="btn-blue" > Write Posts </button>
                             </Link>
