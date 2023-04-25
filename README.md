@@ -6,13 +6,13 @@ Ceci est un projet [Next.js](https://nextjs.org/) créé avec [`create-next-app`
 
 Tout d'abord, lancez le serveur de développement :
 
-\```bash
+```bash
 npm run dev
 # ou
 yarn dev
 # ou
 pnpm dev
-\```
+```
 
 Ouvrez [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
 
