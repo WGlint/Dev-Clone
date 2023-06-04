@@ -1,44 +1,62 @@
-# Projet Next.js 13
+# Projet Next.js 13 and Firebase - Clone Dev.io
 
-Ceci est un projet [Next.js](https://nextjs.org/) créé avec [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+It's a clone of [Dev.io](https://dev.to/) website. With Fireship tutorial, this blog use SSR and Static Rendering for better performance.
+Is you want to see [DEMO](https://devclone-three.vercel.app/).
 
-## Pour commencer
+![Picture of Home Page](./ReadMe/HomePage.png)
 
-Tout d'abord, lancez le serveur de développement :
+## How it's work
+
+In this website you can create account with OAuth Google and choice your unique username. On top of that, you can : 
+
+- Create a post
+- Like each other post
+- Upload picture
+- Preview your post with markdown type
+- Publish or not your post 
+...
+
+![Gif of website](./ReadMe/Show.gif)
+
+For see more, go check yourself !
+
+## How use this code.
+
+First, create a firebase webapp for get yours apikey, authDomain... and write all firebaseConfig in `./lib/firebase.js` file :
+
+```jsx
+const firebaseConfig = {
+    apiKey: "apikey",
+    authDomain: "authDomain",
+    projectId: "projectId",
+    storageBucket: "storageBucket",
+    messagingSenderId: "messagingSenderId",
+    appId: "appId",
+    measurementId: "measurementId"
+}
+```
+
+After that, you can run following bash command :
 
 ```bash
+npm i
 npm run dev
-# ou
+# or
+yarn add
 yarn dev
 # ou
+pnpm i
 pnpm dev
 ```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
+Open [http://localhost:3000](http://localhost:3000) link and have fun for check what can you do.
 
-Vous pouvez commencer à modifier la page en modifiant `pages/index.js`. La page se met à jour automatiquement lorsque vous modifiez le fichier.
+## Learn More
 
-Les [routes API](https://nextjs.org/docs/api-routes/introduction) peuvent être consultées sur [http://localhost:3000/api/hello](http://localhost:3000/api/hello). Ce point de terminaison peut être modifié dans `pages/api/hello.js`.
+To learn more about all thing i use, take a look at the following resources:
 
-Le répertoire `pages/api` est mappé sur `/api/*`. Les fichiers de ce répertoire sont traités comme des [routes API](https://nextjs.org/docs/api-routes/introduction) plutôt que des pages React.
-
-Ce projet utilise [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) pour optimiser automatiquement et charger Inter, une police personnalisée de Google Fonts.
-
-## En savoir plus
-
-Pour en savoir plus sur Next.js, consultez les ressources suivantes :
-
-- [Documentation Next.js](https://nextjs.org/docs) - découvrez les fonctionnalités et l'API de Next.js.
-- [Apprendre Next.js](https://nextjs.org/learn) - un tutoriel interactif sur Next.js.
-
-Vous pouvez également consulter [le dépôt GitHub de Next.js](https://github.com/vercel/next.js/) - vos commentaires et contributions sont les bienvenus !
-
-## Déployer sur Vercel
-
-La manière la plus simple de déployer votre application Next.js est d'utiliser la [Plateforme Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) des créateurs de Next.js.
-
-Consultez notre [documentation sur le déploiement de Next.js](https://nextjs.org/docs/deployment) pour plus de détails.
-
-## Projet final
-
-Voici le lien du projet final pour montrer à quoi il ressemble : [https://devclone-three.vercel.app/](https://devclone-three.vercel.app/)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [React Documentation](https://react.dev/learn) - Front end client framework using with NextJS.
+- [TailwindCSS Documentation](https://tailwindcss.com/docs/installation) - CSS Framework.
+- [Vercel Documentation](https://vercel.com/docs) - Frontend cloud use for deployement and edge function.
+- [Firebase Documentation](https://firebase.google.com/docs/guides?authuser=0&%3Bhl=fr&hl=fr) - NoSQL Database and OAuth.
