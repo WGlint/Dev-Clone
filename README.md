@@ -14,6 +14,7 @@ In this website you can create account with OAuth Google and choice your unique 
 - Upload picture
 - Preview your post with markdown type
 - Publish or not your post 
+- Logging with OAuth Google
 ...
 
 ![Gif of website](./ReadMe/Show.gif)
